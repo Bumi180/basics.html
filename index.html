@@ -1,205 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blending Philosophy - The Art of Tea Making</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@300;400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: "Lato", sans-serif;
-        font-weight: 300;
-        margin: 0;
-        background-color: #e8dfd0;
-      }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tea Basics - The Art of Tea Making</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@300;400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  background-color: #e8dfd0;
+}
 
-      #container {
-        width: 1200px;
-        margin: 0 auto;
-      }
+#container {
+  width: 1200px;
+  margin: 0 auto;
+}
 
-      nav {
-        text-align: center;
-        padding: 40px 0 30px 0;
-        border-bottom: 1px solid #d4c5b0;
-      }
+nav {
+  text-align: center;
+  padding: 40px 0 30px 0;
+  border-bottom: 1px solid #d4c5b0;
+}
 
-      nav a {
-        font-size: 14px;
-        font-weight: 300;
-        color: #5a4a3a;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin: 0 25px;
-      }
+nav a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #5a4a3a;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0 25px;
+}
 
-      nav a:hover {
-        color: #3a3a3a;
-      }
+nav a:hover {
+  color: #3a3a3a;
+}
 
-      .content {
-        padding: 80px 120px;
-      }
+.content {
+  padding: 80px 120px;
+}
 
-      h2 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 64px;
-        font-weight: 300;
-        color: #3a3a3a;
-        text-align: center;
-        letter-spacing: 8px;
-        margin: 0 0 30px 0;
-      }
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: #3a3a3a;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 0 0 30px 0;
+}
 
-      .subtitle {
-        text-align: center;
-        font-size: 20px;
-        color: #5a4a3a;
-        margin-bottom: 60px;
-        font-style: italic;
-      }
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #5a4a3a;
+  margin-bottom: 40px;
+}
 
-      .main-image {
-        width: 100%;
-        max-width: 958px;
-        height: 356px;
-        margin: 40px auto;
-        display: block;
-        object-fit: cover;
-      }
+.main-image {
+  width: 100%;
+  max-width: 958px;
+  height: 356px;
+  margin: 40px auto;
+  display: block;
+  object-fit: cover;
+}
 
-      p {
-        font-size: 18px;
-        color: #5a4a3a;
-        line-height: 2;
-        margin-bottom: 30px;
-        text-align: justify;
-      }
+.two-column {
+  width: 100%;
+  margin: 60px 0;
+  display: flex;
+  align-items: stretch;
+  height: 338px;
+}
 
-      .layer {
-        background: #fff;
-        padding: 50px 60px;
-        margin-bottom: 30px;
-      }
+.col-left {
+  width: 513px;
+}
 
-      .layer h3 {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 32px;
-        color: #3a3a3a;
-        margin-bottom: 25px;
-        font-weight: 500;
-      }
+.col-right {
+  width: 513px;
+}
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 20px;
-      }
+.side-image {
+  width: 513px;
+  height: 338px;
+  object-fit: cover;
+  display: block;
+}
 
-      ul li {
-        font-size: 16px;
-        color: #5a4a3a;
-        margin-bottom: 12px;
-        padding-left: 25px;
-        position: relative;
-        line-height: 1.8;
-      }
+.text-box {
+  padding: 40px 60px;
+  background: #f5f0e8;
+  box-sizing: border-box;
+  height: 100%;
+}
 
-      ul li:before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #c9b896;
-        font-size: 20px;
-      }
+.text-box h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  color: #3a3a3a;
+}
 
-      .quote {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 35px;
-        font-style: italic;
-        color: #7a6a5a;
-        text-align: center;
-        margin: 60px 0;
-        line-height: 1.6;
-      }
+.text-box p {
+  font-size: 16px;
+  color: #5a4a3a;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
 
-      footer {
-        text-align: center;
-        padding: 80px 0 60px 0;
-        border-top: 1px solid #d4c5b0;
-        margin-top: 80px;
-      }
+.grid {
+  background: #f5f0e8;
+  padding: 80px 60px;
+  margin: 60px 0;
+}
 
-      footer p {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 21px;
-        color: #7a6a5a;
-        font-style: italic;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="container">
+.grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="wisdom.html">Ancient Wisdom</a>
-        <a href="blending.html">Blending Philosophy</a>
-        <a href="basics.html">Tea Basics</a>
-        <a href="equipment.html">Equipment</a>
-      </nav>
+.grid-box {
+  background: transparent;
+  padding: 0;
+}
 
-      <div class="content">
-        <h2>FROM PERFUME<br>TO TEACUP</h2>
-        <p class="subtitle">My Three-Layer Blending Philosophy</p>
+.grid-box h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  margin: 0 0 25px 0;
+  color: #3a3a3a;
+}
 
-        <img class="main-image" src="download (1).jpg" alt="Blending station">
+.grid-box p {
+  font-size: 18px;
+  color: #5a4a3a;
+  line-height: 2;
+  margin-bottom: 15px;
+}
 
-        <p>When I first started creating my own tea blends, I found myself overwhelmed by endless possibilities. The breakthrough came when I was looking for perfume. Catching a whiff of a complex, layered fragrance, it suddenly clicked. Tea blending follows the same principles as perfume making.</p>
+footer {
+  text-align: center;
+  padding: 60px 0;
+  border-top: 1px solid #d4c5b0;
+  margin-top: 80px;
+}
 
-        <div class="layer">
-          <h3>Base Notes: The Foundation</h3>
-          <p>Just like base notes are the foundation of fragrance, the health benefits form the foundation of my tea blends. These are the deeply therapeutic herbs that do the real work. The chamomile for sleep, the ginger for digestion, the tulsi for stress relief.</p>
-          <ul>
-            <li>The largest portion of the blend (40-60%)</li>
-            <li>The reason you're drinking the tea</li>
-            <li>The herbs with the most research behind them</li>
-            <li>Often milder in taste but powerful in effect</li>
-          </ul>
+footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  color: #7a6a5a;
+  font-style: italic;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<div id="container">
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="wisdom.html">Ancient Wisdom</a>
+  <a href="blending.html">Blending Philosophy</a>
+  <a href="basics.html">Tea Basics</a>
+  <a href="equipment.html">Equipment</a>
+</nav>
+
+<div class="content">
+  <h2>TEA CRAFT BASICS</h2>
+  <p class="subtitle">Understand Your Base Tools and Methods</p>
+  
+  <img class="main-image" src="download (3).jpg" alt="Different types of tea">
+  
+  <div class="two-column">
+    <div class="col-left">
+      <div class="text-box">
+        <div>
+          <h3>True Teas vs Tisanes</h3>
+          <p>True teas come from the Camellia sinensis plant. These include black, green, oolong, and white tea. They all contain caffeine.</p>
+          <p>Tisanes are herbal teas like chamomile, mint, and rooibos. These are naturally caffeine-free.</p>
         </div>
-
-        <div class="layer">
-          <h3>Middle Notes: The Character</h3>
-          <p>In tea, these are the flavors that make you want to keep sipping—the warming spices, the floral hints, the earthy undertones that give personality to your blend.</p>
-          <ul>
-            <li>The character of your tea (20-40%)</li>
-            <li>What makes each blend unique and memorable</li>
-            <li>The bridge between therapeutic and delicious</li>
-            <li>The flavors that linger pleasantly on your palate</li>
-          </ul>
-        </div>
-
-        <div class="layer">
-          <h3>Top Notes: The Harmony</h3>
-          <p>These are the accent herbs that tie everything together. The pop of citrus peel, the warming touch of cardamom, the subtle complexity that makes you pause and think, "What is that lovely note?"</p>
-          <ul>
-            <li>The finishing touches (10-20%)</li>
-            <li>Often the most fragrant or intense flavors</li>
-            <li>Used sparingly but with big impact</li>
-            <li>The elements that create harmony between base and middle</li>
-          </ul>
-        </div>
-
-        <p class="quote">"Once I started thinking like a perfumer, every cup became a carefully composed symphony of health, taste, and harmony."</p>
       </div>
-
-      <footer>
-       
-      </footer>
-
     </div>
-  </body>
+    <div class="col-right">
+      <img class="side-image" src="download (2).jpg" alt="Tea varieties">
+    </div>
+  </div>
+  
+  <div class="grid">
+    <div class="grid-content">
+      <div class="grid-box">
+        <h3>Water Temperature</h3>
+        <p>Green tea is best brewed with water between 160 and 180°F. Don't let it boil.</p>
+        <p>Black tea prefers hotter water, around 200 to 212°F.</p>
+        <p>Herbal teas do well with water between 205 and 212°F.</p>
+      </div>
+      
+      <div class="grid-box">
+        <h3>Steeping Time</h3>
+        <p>Steep herbal teas for 5 to 10 minutes.</p>
+        <p>Steep true teas for 2 to 5 minutes.</p>
+        <p>Longer steeping extracts more flavor and beneficial compounds, but can also increase bitterness in true teas.</p>
+      </div>
+      
+      <div class="grid-box">
+        <h3>Storage</h3>
+        <p>Keep your blends in airtight containers. Glass jars, tins, or paper bags with a seal work well.</p>
+        <p>Store them in a cool, dry place away from sunlight.</p>
+        <p>Label your blends with the name and date.</p>
+      </div>
+      
+      <div class="grid-box">
+        <h3>Daily Consumption</h3>
+        <p>Herbal teas: Up to 8 cups daily is generally safe since they're caffeine-free.</p>
+        <p>True teas: 2-3 cups daily is associated with health benefits.</p>
+        <p>Start small: Begin with 1 cup daily when trying new herbs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Bhoomika Narayanan</p>
+</footer>
+
+</div>
+</body>
 </html>
